@@ -2,7 +2,7 @@ import { ValidationError } from 'express-validator';
 import { CustomErrorAbstract } from './custom-error.abstract';
 
 export class RequestValidationError extends CustomErrorAbstract {
-    readonly statusCode = 500;
+    readonly statusCode = 400;
 
     constructor(public errors: ValidationError[]) {
         super('Invalid params');
