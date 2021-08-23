@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Router from 'next/router';
 import useRequest from '../../hooks/use-request';
 
-const SignUpComponent = () => {
+const SignInComponent = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [doRequest, errors] = useRequest({
-        url: '/api/users/sign-up',
+        url: '/api/users/sign-in',
         method: 'post',
         body: { email, password },
         onSuccess: () => Router.push('/'),
@@ -19,7 +19,7 @@ const SignUpComponent = () => {
     }
 
     return <form onSubmit={onSubmit}>
-        <h1>Sign Up </h1>
+        <h1>Sign In</h1>
         <div className="form-group">
             <label>Email address</label>
             <input
@@ -37,8 +37,8 @@ const SignUpComponent = () => {
                 className="from-control"/>
         </div>
         { errors }
-        <button className="btn btn-primary">Sign Up</button>
+        <button className="btn btn-primary">Sign In</button>
     </form>
 }
 
-export default SignUpComponent;
+export default SignInComponent;
