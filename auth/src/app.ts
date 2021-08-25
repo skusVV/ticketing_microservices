@@ -2,8 +2,7 @@ import express from 'express';
 import  'express-async-errors'
 import { json } from 'body-parser';
 import cookieSession from 'cookie-session';
-import { NotFoundError } from '@vs-tickets/common';
-import { requestHandler } from '@vs-tickets/common';
+import { NotFoundError, requestHandler } from '@vs-tickets/common';
 
 import { CurrentUserRouter } from './routes/current-user';
 import { SignInUserRouter } from './routes/sign-in';
