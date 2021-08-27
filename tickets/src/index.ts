@@ -11,7 +11,6 @@ const init = async() => {
         throw new Error('MONGO_URI is not defined');
     }
 
-
     try {
         await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
@@ -24,7 +23,7 @@ const init = async() => {
     }
 
     app.listen(3000, () => {
-        console.log('Auth listen on port 3000');
+        console.log('Tickets listen on port 3000');
     });
 };
 
